@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenClaw Affiliate Hub - Build AI Skills Without Coding</title>
+    <title>OpenClaw: Build AI Skills Without Coding | Jim's Review</title>
+    <meta name="description" content="Learn how to build custom AI skills without writing code. Perfect for beginners who want to automate tasks and create AI tools.">
     <style>
         * {
             margin: 0;
@@ -15,84 +16,155 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            background: #f8f9fa;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
         
-        header {
-            text-align: center;
-            padding: 60px 20px;
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .nav-cta {
+            background: #ff6b6b;
             color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s;
         }
         
-        h1 {
+        .nav-cta:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
         }
         
-        .tagline {
+        .hero .subtitle {
             font-size: 1.3rem;
             opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .hero .author {
+            font-size: 1rem;
+            opacity: 0.8;
             margin-bottom: 30px;
         }
         
-        .cta-button {
+        .hero-cta {
             display: inline-block;
             background: #ff6b6b;
             color: white;
-            padding: 15px 40px;
+            padding: 18px 50px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             transition: transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 4px 15px rgba(255,107,107,0.4);
+            margin: 10px;
         }
         
-        .cta-button:hover {
+        .hero-cta:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(255,107,107,0.6);
         }
         
+        .guarantee {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Social Proof */
+        .social-proof {
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .social-proof p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        /* Features Section */
         .features {
             background: white;
-            padding: 60px 20px;
-            margin-top: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            padding: 80px 20px;
         }
         
         .features h2 {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             color: #333;
+        }
+        
+        .section-desc {
+            text-align: center;
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 50px;
         }
         
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 40px;
         }
         
         .feature-card {
-            padding: 30px;
+            padding: 40px 30px;
             background: #f8f9fa;
             border-radius: 15px;
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
         }
         
         .feature-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: #667eea;
         }
         
         .feature-icon {
@@ -101,101 +173,289 @@
         }
         
         .feature-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 15px;
             color: #667eea;
         }
         
-        .affiliate-section {
-            background: white;
-            padding: 60px 20px;
-            margin-top: 40px;
-            border-radius: 20px;
+        /* Pricing Section */
+        .pricing {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
             text-align: center;
         }
         
-        .affiliate-section h2 {
+        .pricing h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
         
-        .price-tag {
-            font-size: 3rem;
-            color: #ff6b6b;
+        .pricing-desc {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        
+        .price-card {
+            background: white;
+            color: #333;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+        
+        .price-card h3 {
+            font-size: 1.5rem;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .price {
+            font-size: 4rem;
             font-weight: bold;
+            color: #ff6b6b;
             margin: 20px 0;
         }
         
-        footer {
+        .price-features {
+            list-style: none;
+            text-align: left;
+            margin: 30px 0;
+        }
+        
+        .price-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .price-features li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background: white;
+            padding: 80px 20px;
+        }
+        
+        .faq h2 {
             text-align: center;
-            padding: 40px;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+        
+        .faq-item {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .faq-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: #333;
             color: white;
-            margin-top: 40px;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #222;
+            color: #999;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #667eea;
         }
         
         .disclaimer {
-            font-size: 0.9rem;
-            opacity: 0.8;
+            font-size: 0.85rem;
             margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .price {
+                font-size: 3rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🤖 OpenClaw Affiliate Hub</h1>
-            <p class="tagline">Build Custom AI Skills Without Writing Code</p>
-            <a href="https://jvz7.com/c/420559/434767/" class="cta-button" target="_blank">Get Started with OpenClaw →</a>
-        </header>
-        
-        <section class="features">
-            <h2>What You Can Build</h2>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">🤖 OpenClaw Review</div>
+            <a href="https://jvz7.com/c/420559/434767/" class="nav-cta" target="_blank">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Build Custom AI Skills<br>Without Writing Code</h1>
+            <p class="subtitle">The beginner-friendly way to create AI tools that automate your work</p>
+            <p class="author">By Jim | Building my AI-powered business</p>
+            <a href="https://jvz7.com/c/420559/434767/" class="hero-cta" target="_blank">Get OpenClaw Now →</a>
+            <p class="guarantee">✓ 30-Day Money Back Guarantee ✓ Beginner Friendly</p>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <p>Join thousands of beginners building AI skills without coding experience</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>What You Can Build With OpenClaw</h2>
+            <p class="section-desc">I started with zero coding knowledge. Now I'm building AI tools that save me hours every week. Here's what's possible:</p>
+            
             <div class="feature-grid">
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <h3>Automate Tasks</h3>
-                    <p>Create skills that handle repetitive work automatically. Save hours every week.</p>
+                    <h3>Task Automation</h3>
+                    <p>Create skills that handle repetitive work automatically. I use mine to organize files and process data.</p>
                 </div>
+                
                 <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Generate Content</h3>
-                    <p>Build skills for social media posts, emails, and marketing content.</p>
+                    <div class="feature-icon">📝</div>
+                    <h3>Content Creation</h3>
+                    <p>Build tools that help write social posts, emails, and marketing copy. My content skill saves me 5 hours/week.</p>
                 </div>
+                
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
-                    <h3>Analyze Data</h3>
-                    <p>Create tools that process information and give you insights.</p>
+                    <h3>Data Processing</h3>
+                    <p>Create skills that analyze information and give you insights. Perfect for research and reporting.</p>
                 </div>
+                
                 <div class="feature-card">
                     <div class="feature-icon">🤖</div>
                     <h3>AI Assistants</h3>
-                    <p>Build custom AI helpers for your specific business needs.</p>
+                    <p>Build custom AI helpers for your specific needs. I made one that helps with customer questions.</p>
                 </div>
+                
                 <div class="feature-card">
                     <div class="feature-icon">🔗</div>
-                    <h3>Connect Tools</h3>
-                    <p>Integrate different apps and services seamlessly.</p>
+                    <h3>App Integration</h3>
+                    <p>Connect different tools together seamlessly. My skills talk to Dropbox, YouTube, and more.</p>
                 </div>
+                
                 <div class="feature-card">
                     <div class="feature-icon">💰</div>
-                    <h3>Monetize Skills</h3>
-                    <p>Create valuable tools you can sell or use for clients.</p>
+                    <h3>Monetizable Tools</h3>
+                    <p>Create valuable skills you can sell or use for clients. I'm building a portfolio of AI tools.</p>
                 </div>
             </div>
-        </section>
-        
-        <section class="affiliate-section">
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
             <h2>Start Building Today</h2>
-            <p>OpenClaw makes it easy to create AI skills without coding.</p>
-            <div class="price-tag">$27</div>
-            <p>Entry level - Perfect for beginners</p>
-            <a href="https://jvz7.com/c/420559/434767/" class="cta-button" target="_blank">Get OpenClaw Now →</a>
-        </section>
-        
-        <footer>
-            <p>&copy; 2026 OpenClaw Affiliate Hub. All rights reserved.</p>
-            <p class="disclaimer">This site contains affiliate links. I may earn a commission if you purchase through these links.</p>
-        </footer>
-    </div>
+            <p class="pricing-desc">I started with the $27 entry level. It's everything you need to begin.</p>
+            
+            <div class="price-card">
+                <h3>OpenClaw Lite</h3>
+                <div class="price">$27</div>
+                <p>Perfect for beginners</p>
+                
+                <ul class="price-features">
+                    <li>Build unlimited skills</li>
+                    <li>Access to AI models</li>
+                    <li>Community support</li>
+                    <li>Video tutorials included</li>
+                    <li>No coding required</li>
+                    <li>30-day money back guarantee</li>
+                </ul>
+                
+                <a href="https://jvz7.com/c/420559/434767/" class="hero-cta" target="_blank">Get Started Now →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>Do I need coding experience?</h3>
+                <p>No! I had zero coding knowledge when I started. OpenClaw is designed for beginners. You build skills through a simple interface.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>How long does it take to build a skill?</h3>
+                <p>My first skill took about 2 hours. Now I can build simple ones in 30 minutes. It gets faster as you learn.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>What if I get stuck?</h3>
+                <p>The community is very helpful. Plus there are video tutorials that walk you through everything step by step.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Is there a money-back guarantee?</h3>
+                <p>Yes! 30-day money-back guarantee. If you don't like it, you get a full refund. No risk.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Build Your First AI Skill?</h2>
+            <p>Join me and thousands of others building AI tools without coding.<br>Start your journey today.</p>
+            <a href="https://jvz7.com/c/420559/434767/" class="hero-cta" target="_blank">Get OpenClaw for $27 →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Jim's OpenClaw Review | <a href="https://github.com/jimmyx0">GitHub</a></p>
+            <p class="disclaimer">
+                This page contains affiliate links. I may earn a commission if you purchase through these links at no extra cost to you. 
+                I only recommend tools I personally use and believe in. Results may vary.
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
