@@ -1,0 +1,9 @@
+{
+  "name": "openclaw-affiliate-hub",
+  "version": "1.0.0",
+  "description": "OpenClaw affiliate marketing hub",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  }
+}
