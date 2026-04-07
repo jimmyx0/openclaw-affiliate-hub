@@ -1,2 +1,3 @@
-# openclaw-affiliate-hub
-OpenClaw affiliate marketing hub - tools, resources, and reviews
+# OpenClaw Affiliate Hub
+
+Live site for OpenClaw affiliate marketing.
